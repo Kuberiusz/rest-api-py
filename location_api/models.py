@@ -17,14 +17,13 @@ class UserProfileManager(BaseUserManager):
         user = self.model(email=email, name=name)
         user.set_password(password)
         user.save(using=self._db)
-
         return user
 
     def create_superuser(self, email, name, password):
         """Create a new superuser with given details"""
-        user = self.create_user(email, name, password_validation)
-        user.is_superuser = true  # from PermissionsMixin
-        user.is_staff = true
+        user = self.create_user(email, name, password)
+        user.is_superuser = True  # from PermissionsMixin
+        user.is_staff = True
         user.save(using=self._db)
         return user
 
