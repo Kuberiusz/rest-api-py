@@ -29,6 +29,7 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+#3 ostatnie są dodane w ramach developmentu i django imojego API
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -121,3 +122,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#standardowo brakuje KUBA
+AUTH_USER_MODEL = 'location_api.UserProfile'
